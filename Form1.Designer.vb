@@ -29,6 +29,7 @@ Partial Class form1
         Button5 = New Button()
         btnNewQuote = New Button()
         cmb_company = New ComboBox()
+        btn_Inventory = New Button()
         SuspendLayout()
         ' 
         ' btn_openInvoices
@@ -69,7 +70,7 @@ Partial Class form1
         ' 
         ' Button5
         ' 
-        Button5.Location = New Point(21, 519)
+        Button5.Location = New Point(378, 599)
         Button5.Name = "Button5"
         Button5.Size = New Size(151, 41)
         Button5.TabIndex = 4
@@ -94,11 +95,21 @@ Partial Class form1
         cmb_company.Size = New Size(264, 33)
         cmb_company.TabIndex = 6
         ' 
+        ' btn_Inventory
+        ' 
+        btn_Inventory.Location = New Point(21, 456)
+        btn_Inventory.Name = "btn_Inventory"
+        btn_Inventory.Size = New Size(243, 41)
+        btn_Inventory.TabIndex = 7
+        btn_Inventory.Text = "Inventory"
+        btn_Inventory.UseVisualStyleBackColor = True
+        ' 
         ' form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1904, 1041)
+        Controls.Add(btn_Inventory)
         Controls.Add(cmb_company)
         Controls.Add(btnNewQuote)
         Controls.Add(Button5)
@@ -118,5 +129,6 @@ Partial Class form1
     Friend WithEvents Button5 As Button
     Friend WithEvents btnNewQuote As Button
     Friend WithEvents cmb_company As ComboBox
+    Friend WithEvents btn_Inventory As Button
 
 End Class

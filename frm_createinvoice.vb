@@ -1,9 +1,11 @@
 ﻿Public Class frm_createinvoice
     Public Property formtype As String = "I"
     Dim companyid As Integer
+    Dim customerid As Integer
+
     Private Sub frm_createinvoice_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Dim formtypetext As String
+        Dim formtypetext As String = ""
         If formtype = "Q" Then formtypetext = "Quote"
         If formtype = "I" Then formtypetext = "Invoice"
 

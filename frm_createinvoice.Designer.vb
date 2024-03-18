@@ -23,6 +23,12 @@ Partial Class frm_createinvoice
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         dgv_invoice = New DataGridView()
+        line_code = New DataGridViewTextBoxColumn()
+        line_description = New DataGridViewTextBoxColumn()
+        item_qty = New DataGridViewTextBoxColumn()
+        item_taxrate = New DataGridViewTextBoxColumn()
+        item_unitcost = New DataGridViewTextBoxColumn()
+        line_amount = New DataGridViewTextBoxColumn()
         lbl_currentcompany = New Label()
         Label1 = New Label()
         lblGrandTotal = New Label()
@@ -31,12 +37,6 @@ Partial Class frm_createinvoice
         Label2 = New Label()
         Label3 = New Label()
         btn_createInvoice = New Button()
-        line_code = New DataGridViewTextBoxColumn()
-        line_description = New DataGridViewTextBoxColumn()
-        item_qty = New DataGridViewTextBoxColumn()
-        item_taxrate = New DataGridViewTextBoxColumn()
-        item_unitcost = New DataGridViewTextBoxColumn()
-        line_amount = New DataGridViewTextBoxColumn()
         CType(dgv_invoice, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -48,6 +48,47 @@ Partial Class frm_createinvoice
         dgv_invoice.Name = "dgv_invoice"
         dgv_invoice.Size = New Size(898, 392)
         dgv_invoice.TabIndex = 0
+        ' 
+        ' line_code
+        ' 
+        line_code.HeaderText = "Code"
+        line_code.MaxInputLength = 25
+        line_code.Name = "line_code"
+        ' 
+        ' line_description
+        ' 
+        line_description.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        line_description.HeaderText = "Description"
+        line_description.MaxInputLength = 100
+        line_description.MinimumWidth = 250
+        line_description.Name = "line_description"
+        ' 
+        ' item_qty
+        ' 
+        item_qty.HeaderText = "Qty"
+        item_qty.Name = "item_qty"
+        ' 
+        ' item_taxrate
+        ' 
+        item_taxrate.HeaderText = "VAT (%)"
+        item_taxrate.MaxInputLength = 2
+        item_taxrate.MinimumWidth = 75
+        item_taxrate.Name = "item_taxrate"
+        item_taxrate.Width = 75
+        ' 
+        ' item_unitcost
+        ' 
+        item_unitcost.HeaderText = "Unit Cost"
+        item_unitcost.Name = "item_unitcost"
+        ' 
+        ' line_amount
+        ' 
+        line_amount.HeaderText = "Amount"
+        line_amount.MaxInputLength = 7
+        line_amount.MinimumWidth = 75
+        line_amount.Name = "line_amount"
+        line_amount.ReadOnly = True
+        line_amount.Width = 75
         ' 
         ' lbl_currentcompany
         ' 
@@ -112,8 +153,9 @@ Partial Class frm_createinvoice
         ' Label3
         ' 
         Label3.AutoSize = True
+        Label3.BackColor = SystemColors.GradientInactiveCaption
         Label3.Font = New Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(195, 72)
+        Label3.Location = New Point(196, 72)
         Label3.Name = "Label3"
         Label3.Size = New Size(117, 25)
         Label3.TabIndex = 10
@@ -127,47 +169,6 @@ Partial Class frm_createinvoice
         btn_createInvoice.TabIndex = 11
         btn_createInvoice.Text = "Create Invoice"
         btn_createInvoice.UseVisualStyleBackColor = True
-        ' 
-        ' line_code
-        ' 
-        line_code.HeaderText = "Code"
-        line_code.MaxInputLength = 25
-        line_code.Name = "line_code"
-        ' 
-        ' line_description
-        ' 
-        line_description.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        line_description.HeaderText = "Description"
-        line_description.MaxInputLength = 100
-        line_description.MinimumWidth = 250
-        line_description.Name = "line_description"
-        ' 
-        ' item_qty
-        ' 
-        item_qty.HeaderText = "Qty"
-        item_qty.Name = "item_qty"
-        ' 
-        ' item_taxrate
-        ' 
-        item_taxrate.HeaderText = "VAT (%)"
-        item_taxrate.MaxInputLength = 2
-        item_taxrate.MinimumWidth = 75
-        item_taxrate.Name = "item_taxrate"
-        item_taxrate.Width = 75
-        ' 
-        ' item_unitcost
-        ' 
-        item_unitcost.HeaderText = "Unit Cost"
-        item_unitcost.Name = "item_unitcost"
-        ' 
-        ' line_amount
-        ' 
-        line_amount.HeaderText = "Amount"
-        line_amount.MaxInputLength = 7
-        line_amount.MinimumWidth = 75
-        line_amount.Name = "line_amount"
-        line_amount.ReadOnly = True
-        line_amount.Width = 75
         ' 
         ' frm_createinvoice
         ' 

@@ -103,4 +103,9 @@ Public Class form1
         invform.formtype = "Q"
         invform.Show()
     End Sub
+
+    Private Sub btn_Inventory_Click(sender As Object, e As EventArgs) Handles btn_Inventory.Click
+
+        frm_inventory.Show()
+    End Sub
 End Class

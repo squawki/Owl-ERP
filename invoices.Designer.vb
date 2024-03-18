@@ -24,6 +24,7 @@ Partial Class invoices
     Private Sub InitializeComponent()
         DataGridView1 = New DataGridView()
         lblInvoices = New Label()
+        Label1 = New Label()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -45,11 +46,21 @@ Partial Class invoices
         lblInvoices.TabIndex = 1
         lblInvoices.Text = "Invoices For #############"
         ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(832, 29)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(41, 15)
+        Label1.TabIndex = 2
+        Label1.Text = "Label1"
+        ' 
         ' invoices
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1180, 839)
+        Controls.Add(Label1)
         Controls.Add(lblInvoices)
         Controls.Add(DataGridView1)
         Name = "invoices"
@@ -61,4 +72,5 @@ Partial Class invoices
 
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents lblInvoices As Label
+    Friend WithEvents Label1 As Label
 End Class
