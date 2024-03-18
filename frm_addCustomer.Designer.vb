@@ -30,11 +30,11 @@ Partial Class frm_addCustomer
         txtCompany = New TextBox()
         txtPhoneNo = New TextBox()
         txtEmail = New TextBox()
-        TextBox6 = New TextBox()
-        TextBox7 = New TextBox()
-        TextBox8 = New TextBox()
-        TextBox9 = New TextBox()
-        TextBox10 = New TextBox()
+        txt_addressline1 = New TextBox()
+        txt_addressline2 = New TextBox()
+        txt_addresslineCity = New TextBox()
+        txt_addresslineState = New TextBox()
+        txt_addresslinePostcode = New TextBox()
         Label2 = New Label()
         Label3 = New Label()
         Label4 = New Label()
@@ -46,7 +46,7 @@ Partial Class frm_addCustomer
         Label10 = New Label()
         Label11 = New Label()
         Label12 = New Label()
-        TextBox11 = New TextBox()
+        txt_addresslineCountry = New TextBox()
         SuspendLayout()
         ' 
         ' btnAddCustomer
@@ -117,45 +117,45 @@ Partial Class frm_addCustomer
         txtEmail.Size = New Size(264, 29)
         txtEmail.TabIndex = 13
         ' 
-        ' TextBox6
+        ' txt_addressline1
         ' 
-        TextBox6.Font = New Font("Segoe UI", 12F)
-        TextBox6.Location = New Point(595, 104)
-        TextBox6.Name = "TextBox6"
-        TextBox6.Size = New Size(264, 29)
-        TextBox6.TabIndex = 14
+        txt_addressline1.Font = New Font("Segoe UI", 12F)
+        txt_addressline1.Location = New Point(595, 104)
+        txt_addressline1.Name = "txt_addressline1"
+        txt_addressline1.Size = New Size(264, 29)
+        txt_addressline1.TabIndex = 14
         ' 
-        ' TextBox7
+        ' txt_addressline2
         ' 
-        TextBox7.Font = New Font("Segoe UI", 12F)
-        TextBox7.Location = New Point(595, 139)
-        TextBox7.Name = "TextBox7"
-        TextBox7.Size = New Size(264, 29)
-        TextBox7.TabIndex = 15
+        txt_addressline2.Font = New Font("Segoe UI", 12F)
+        txt_addressline2.Location = New Point(595, 139)
+        txt_addressline2.Name = "txt_addressline2"
+        txt_addressline2.Size = New Size(264, 29)
+        txt_addressline2.TabIndex = 15
         ' 
-        ' TextBox8
+        ' txt_addresslineCity
         ' 
-        TextBox8.Font = New Font("Segoe UI", 12F)
-        TextBox8.Location = New Point(595, 196)
-        TextBox8.Name = "TextBox8"
-        TextBox8.Size = New Size(264, 29)
-        TextBox8.TabIndex = 16
+        txt_addresslineCity.Font = New Font("Segoe UI", 12F)
+        txt_addresslineCity.Location = New Point(595, 196)
+        txt_addresslineCity.Name = "txt_addresslineCity"
+        txt_addresslineCity.Size = New Size(264, 29)
+        txt_addresslineCity.TabIndex = 16
         ' 
-        ' TextBox9
+        ' txt_addresslineState
         ' 
-        TextBox9.Font = New Font("Segoe UI", 12F)
-        TextBox9.Location = New Point(595, 231)
-        TextBox9.Name = "TextBox9"
-        TextBox9.Size = New Size(264, 29)
-        TextBox9.TabIndex = 17
+        txt_addresslineState.Font = New Font("Segoe UI", 12F)
+        txt_addresslineState.Location = New Point(595, 231)
+        txt_addresslineState.Name = "txt_addresslineState"
+        txt_addresslineState.Size = New Size(264, 29)
+        txt_addresslineState.TabIndex = 17
         ' 
-        ' TextBox10
+        ' txt_addresslinePostcode
         ' 
-        TextBox10.Font = New Font("Segoe UI", 12F)
-        TextBox10.Location = New Point(595, 266)
-        TextBox10.Name = "TextBox10"
-        TextBox10.Size = New Size(264, 29)
-        TextBox10.TabIndex = 18
+        txt_addresslinePostcode.Font = New Font("Segoe UI", 12F)
+        txt_addresslinePostcode.Location = New Point(595, 266)
+        txt_addresslinePostcode.Name = "txt_addresslinePostcode"
+        txt_addresslinePostcode.Size = New Size(264, 29)
+        txt_addresslinePostcode.TabIndex = 18
         ' 
         ' Label2
         ' 
@@ -267,13 +267,13 @@ Partial Class frm_addCustomer
         Label12.TabIndex = 30
         Label12.Text = "Country:"
         ' 
-        ' TextBox11
+        ' txt_addresslineCountry
         ' 
-        TextBox11.Font = New Font("Segoe UI", 12F)
-        TextBox11.Location = New Point(595, 301)
-        TextBox11.Name = "TextBox11"
-        TextBox11.Size = New Size(264, 29)
-        TextBox11.TabIndex = 29
+        txt_addresslineCountry.Font = New Font("Segoe UI", 12F)
+        txt_addresslineCountry.Location = New Point(595, 301)
+        txt_addresslineCountry.Name = "txt_addresslineCountry"
+        txt_addresslineCountry.Size = New Size(264, 29)
+        txt_addresslineCountry.TabIndex = 29
         ' 
         ' frm_addCustomer
         ' 
@@ -281,7 +281,7 @@ Partial Class frm_addCustomer
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(922, 485)
         Controls.Add(Label12)
-        Controls.Add(TextBox11)
+        Controls.Add(txt_addresslineCountry)
         Controls.Add(Label11)
         Controls.Add(Label10)
         Controls.Add(Label9)
@@ -292,11 +292,11 @@ Partial Class frm_addCustomer
         Controls.Add(Label4)
         Controls.Add(Label3)
         Controls.Add(Label2)
-        Controls.Add(TextBox10)
-        Controls.Add(TextBox9)
-        Controls.Add(TextBox8)
-        Controls.Add(TextBox7)
-        Controls.Add(TextBox6)
+        Controls.Add(txt_addresslinePostcode)
+        Controls.Add(txt_addresslineState)
+        Controls.Add(txt_addresslineCity)
+        Controls.Add(txt_addressline2)
+        Controls.Add(txt_addressline1)
         Controls.Add(txtEmail)
         Controls.Add(txtPhoneNo)
         Controls.Add(txtCompany)
@@ -319,11 +319,11 @@ Partial Class frm_addCustomer
     Friend WithEvents txtCompany As TextBox
     Friend WithEvents txtPhoneNo As TextBox
     Friend WithEvents txtEmail As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents txt_addressline1 As TextBox
+    Friend WithEvents txt_addressline2 As TextBox
+    Friend WithEvents txt_addresslineCity As TextBox
+    Friend WithEvents txt_addresslineState As TextBox
+    Friend WithEvents txt_addresslinePostcode As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
@@ -335,5 +335,5 @@ Partial Class frm_addCustomer
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents TextBox11 As TextBox
+    Friend WithEvents txt_addresslineCountry As TextBox
 End Class

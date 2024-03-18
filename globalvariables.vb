@@ -6,7 +6,7 @@ Public Class globalvariables
 
     Public Shared selectedcompany As String
     Public Shared selectedcompany_name As String
-
+    Public Shared defaulttaxrate As Decimal = 10
 
 
 

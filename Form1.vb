@@ -90,4 +90,17 @@ Public Class form1
     Private Sub btn_newcustomer_Click(sender As Object, e As EventArgs) Handles btn_newcustomer.Click
         frm_addCustomer.Show()
     End Sub
+
+    Private Sub btn_newInvoice_Click(sender As Object, e As EventArgs) Handles btn_newInvoice.Click
+
+        Dim invform As New frm_createinvoice
+        invform.formtype = "I"
+        invform.Show()
+    End Sub
+
+    Private Sub btnNewQuote_Click(sender As Object, e As EventArgs) Handles btnNewQuote.Click
+        Dim invform As New frm_createinvoice
+        invform.formtype = "Q"
+        invform.Show()
+    End Sub
 End Class

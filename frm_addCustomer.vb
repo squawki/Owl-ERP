@@ -16,7 +16,7 @@ Public Class frm_addCustomer
 
     Private Sub btnAddCustomer_Click(sender As Object, e As EventArgs) Handles btnAddCustomer.Click
 
-        Dim query As String = "insert into customers (assignedCompany, customerFname, customerLname, customerCompany, customerEmail, customerPhoneNo, customeractive) values (@companyID, @firstName, @lastName, @company, @email, @phone, 1);"
+        Dim query As String = "insert into customers (assignedCompany, customerFname, customerLname, customerCompany, customerEmail, customerPhoneNo, address_line1, address_line2, address_city, address_state, address_postcode, address_country, customeractive) values (@companyID, @firstName, @lastName, @company, @email, @phone, @address_line1, @address_line2, @address_city, @address_state, @address_postcode, @address_country, 1);"
         Dim rowsaffected As Integer
         Using conn As New SQLiteConnection(globalvariables.connectionString)
             conn.Open()
@@ -29,6 +29,15 @@ Public Class frm_addCustomer
                 cmd.Parameters.AddWithValue("@company", txtCompany.Text)
                 cmd.Parameters.AddWithValue("@email", txtEmail.Text)
                 cmd.Parameters.AddWithValue("@phone", txtPhoneNo.Text)
+
+                cmd.Parameters.AddWithValue("@address_line1", txt_addressline1.Text)
+                cmd.Parameters.AddWithValue("@address_line2", txt_addressline2.Text)
+                cmd.Parameters.AddWithValue("@address_city", txt_addresslineCity.Text)
+                cmd.Parameters.AddWithValue("@address_state", txt_addresslineState.Text)
+                cmd.Parameters.AddWithValue("@address_postcode", txt_addresslinePostcode.Text)
+                cmd.Parameters.AddWithValue("@address_country", txt_addresslineCountry.Text)
+
+
 
 
                 ' Execute the INSERT query

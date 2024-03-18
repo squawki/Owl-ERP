@@ -24,10 +24,10 @@ Partial Class form1
     Private Sub InitializeComponent()
         btn_openInvoices = New Button()
         btn_opencustomers = New Button()
-        Button3 = New Button()
+        btn_newInvoice = New Button()
         btn_newcustomer = New Button()
         Button5 = New Button()
-        Button6 = New Button()
+        btnNewQuote = New Button()
         cmb_company = New ComboBox()
         SuspendLayout()
         ' 
@@ -49,14 +49,14 @@ Partial Class form1
         btn_opencustomers.Text = "Customers"
         btn_opencustomers.UseVisualStyleBackColor = True
         ' 
-        ' Button3
+        ' btn_newInvoice
         ' 
-        Button3.Location = New Point(21, 170)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(151, 41)
-        Button3.TabIndex = 2
-        Button3.Text = "New Invoice"
-        Button3.UseVisualStyleBackColor = True
+        btn_newInvoice.Location = New Point(21, 170)
+        btn_newInvoice.Name = "btn_newInvoice"
+        btn_newInvoice.Size = New Size(151, 41)
+        btn_newInvoice.TabIndex = 2
+        btn_newInvoice.Text = "New Invoice"
+        btn_newInvoice.UseVisualStyleBackColor = True
         ' 
         ' btn_newcustomer
         ' 
@@ -76,14 +76,14 @@ Partial Class form1
         Button5.Text = "Settings"
         Button5.UseVisualStyleBackColor = True
         ' 
-        ' Button6
+        ' btnNewQuote
         ' 
-        Button6.Location = New Point(21, 217)
-        Button6.Name = "Button6"
-        Button6.Size = New Size(151, 41)
-        Button6.TabIndex = 5
-        Button6.Text = "New Quote"
-        Button6.UseVisualStyleBackColor = True
+        btnNewQuote.Location = New Point(21, 217)
+        btnNewQuote.Name = "btnNewQuote"
+        btnNewQuote.Size = New Size(151, 41)
+        btnNewQuote.TabIndex = 5
+        btnNewQuote.Text = "New Quote"
+        btnNewQuote.UseVisualStyleBackColor = True
         ' 
         ' cmb_company
         ' 
@@ -100,10 +100,10 @@ Partial Class form1
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1904, 1041)
         Controls.Add(cmb_company)
-        Controls.Add(Button6)
+        Controls.Add(btnNewQuote)
         Controls.Add(Button5)
         Controls.Add(btn_newcustomer)
-        Controls.Add(Button3)
+        Controls.Add(btn_newInvoice)
         Controls.Add(btn_opencustomers)
         Controls.Add(btn_openInvoices)
         Name = "form1"
@@ -113,10 +113,10 @@ Partial Class form1
 
     Friend WithEvents btn_openInvoices As Button
     Friend WithEvents btn_opencustomers As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents btn_newInvoice As Button
     Friend WithEvents btn_newcustomer As Button
     Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
+    Friend WithEvents btnNewQuote As Button
     Friend WithEvents cmb_company As ComboBox
 
 End Class
