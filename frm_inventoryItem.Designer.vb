@@ -34,7 +34,7 @@ Partial Class frm_inventoryItem
         Label1 = New Label()
         txtItemCode = New TextBox()
         cmb_company = New ComboBox()
-        btnAddItem = New Button()
+        btnItemAction = New Button()
         SuspendLayout()
         ' 
         ' Label6
@@ -146,20 +146,20 @@ Partial Class frm_inventoryItem
         cmb_company.Size = New Size(264, 29)
         cmb_company.TabIndex = 25
         ' 
-        ' btnAddItem
+        ' btnItemAction
         ' 
-        btnAddItem.Location = New Point(138, 361)
-        btnAddItem.Name = "btnAddItem"
-        btnAddItem.Size = New Size(232, 48)
-        btnAddItem.TabIndex = 24
-        btnAddItem.Text = "Add Item"
-        btnAddItem.UseVisualStyleBackColor = True
+        btnItemAction.Location = New Point(138, 361)
+        btnItemAction.Name = "btnItemAction"
+        btnItemAction.Size = New Size(232, 48)
+        btnItemAction.TabIndex = 24
+        btnItemAction.Text = "### Item"
+        btnItemAction.UseVisualStyleBackColor = True
         ' 
         ' frm_inventoryItem
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(857, 585)
+        ClientSize = New Size(990, 585)
         Controls.Add(Label6)
         Controls.Add(Label5)
         Controls.Add(Label4)
@@ -172,7 +172,7 @@ Partial Class frm_inventoryItem
         Controls.Add(Label1)
         Controls.Add(txtItemCode)
         Controls.Add(cmb_company)
-        Controls.Add(btnAddItem)
+        Controls.Add(btnItemAction)
         Name = "frm_inventoryItem"
         Text = "frm_inventoryItem"
         ResumeLayout(False)
@@ -191,5 +191,5 @@ Partial Class frm_inventoryItem
     Friend WithEvents Label1 As Label
     Friend WithEvents txtItemCode As TextBox
     Friend WithEvents cmb_company As ComboBox
-    Friend WithEvents btnAddItem As Button
+    Friend WithEvents btnItemAction As Button
 End Class

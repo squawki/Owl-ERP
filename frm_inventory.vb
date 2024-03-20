@@ -7,7 +7,7 @@ Public Class frm_inventory
         LoadInventory()
     End Sub
 
-    Private Sub LoadInventory()
+    Public Sub LoadInventory()
 
 
         ' Set up the SQL query
@@ -16,6 +16,7 @@ Public Class frm_inventory
 
 
         ' Create a list to store names retrieved from the database
+        inventory_results.Clear()
 
         Using conn As New SQLiteConnection(globalvariables.connectionString)
             conn.Open()
@@ -39,9 +40,9 @@ Public Class frm_inventory
 
         End Using
 
+        'dgv_inventory.DataSource = Nothing
 
         dgv_inventory.DataSource = inventory_results
-
 
 
     End Sub
@@ -58,7 +59,7 @@ Public Class frm_inventory
     Private Sub btnAddItem_Click(sender As Object, e As EventArgs) Handles btnAddItem.Click
         Dim frm_invitm As New frm_inventoryItem
         frm_invitm.inventoryitem_code = "N" 'N for New Item
-        frm_inventoryItem.Show()
+        frm_invitm.Show()
 
     End Sub
 
