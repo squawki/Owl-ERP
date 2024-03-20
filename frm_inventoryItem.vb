@@ -42,13 +42,13 @@ Public Class frm_inventoryItem
 
                             ' Add all the names from the database to the list
                             While reader.Read()
-                                cmb_company.SelectedValue = reader("company")
-                                cmb_company.Text = globalvariables.GetCompanyNameById(reader("company"))
-                                txtItemCode.Text = reader("inventorycode")
-                                txtDescription.Text = reader("description")
-                                txtTaxrate.Text = reader("taxrate")
-                                txtpriceexgst.Text = reader("price_extax")
-                                txtAvailableQty.Text = reader("qty_available")
+                                cmb_company.SelectedValue = If(Convert.IsDBNull(reader("company")), DBNull.Value, reader("company"))
+                                cmb_company.Text = globalvariables.GetCompanyNameById(If(Convert.IsDBNull(reader("company")), DBNull.Value, reader("company")))
+                                txtItemCode.Text = If(Convert.IsDBNull(reader("inventorycode")), String.Empty, reader("inventorycode"))
+                                txtDescription.Text = If(Convert.IsDBNull(reader("description")), String.Empty, reader("description"))
+                                txtTaxrate.Text = If(Convert.IsDBNull(reader("taxrate")), String.Empty, reader("taxrate"))
+                                txtpriceexgst.Text = If(Convert.IsDBNull(reader("price_extax")), String.Empty, reader("price_extax"))
+                                txtAvailableQty.Text = If(Convert.IsDBNull(reader("qty_available")), String.Empty, reader("qty_available"))
                             End While
                         End Using
                     End Using

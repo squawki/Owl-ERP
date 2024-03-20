@@ -51,8 +51,21 @@ Public Class frm_customers
 
     End Sub
 
+    Private Sub dgv_customers_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_customers.CellDoubleClick
+        If dgv_customers.SelectedRows.Count > 0 Then
+            ' Get the value of the cell in the first column of the selected row
+            Dim customerID As String = dgv_customers.SelectedRows(0).Cells(0).Value?.ToString()
 
+            ' Check Inventory ID for is not null
+            If customerID IsNot Nothing Then
+                Dim frm_oc As New frm_openCustomer
+                frm_oc.customerID = customerID 'N for New Item
+                frm_oc.Show()
+            End If
+        Else
 
+        End If
+    End Sub
 End Class
 Public Class customer_result
     Public Property ID As Integer
