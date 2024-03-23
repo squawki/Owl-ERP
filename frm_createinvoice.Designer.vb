@@ -35,7 +35,7 @@ Partial Class frm_createinvoice
         lblItems = New Label()
         Label4 = New Label()
         Label2 = New Label()
-        Label3 = New Label()
+        lblSelectCustomer = New Label()
         btn_createInvoice = New Button()
         CType(dgv_invoice, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -150,16 +150,16 @@ Partial Class frm_createinvoice
         Label2.TabIndex = 9
         Label2.Text = "Customer:"
         ' 
-        ' Label3
+        ' lblSelectCustomer
         ' 
-        Label3.AutoSize = True
-        Label3.BackColor = SystemColors.GradientInactiveCaption
-        Label3.Font = New Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(196, 72)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(117, 25)
-        Label3.TabIndex = 10
-        Label3.Text = "<---Select-->"
+        lblSelectCustomer.AutoSize = True
+        lblSelectCustomer.BackColor = SystemColors.GradientInactiveCaption
+        lblSelectCustomer.Font = New Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblSelectCustomer.Location = New Point(196, 72)
+        lblSelectCustomer.Name = "lblSelectCustomer"
+        lblSelectCustomer.Size = New Size(117, 25)
+        lblSelectCustomer.TabIndex = 10
+        lblSelectCustomer.Text = "<---Select-->"
         ' 
         ' btn_createInvoice
         ' 
@@ -176,7 +176,7 @@ Partial Class frm_createinvoice
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1112, 694)
         Controls.Add(btn_createInvoice)
-        Controls.Add(Label3)
+        Controls.Add(lblSelectCustomer)
         Controls.Add(Label2)
         Controls.Add(lblItems)
         Controls.Add(Label4)
@@ -198,7 +198,7 @@ Partial Class frm_createinvoice
     Friend WithEvents lblItems As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
+    Friend WithEvents lblSelectCustomer As Label
     Friend WithEvents btn_createInvoice As Button
     Friend WithEvents line_code As DataGridViewTextBoxColumn
     Friend WithEvents line_description As DataGridViewTextBoxColumn

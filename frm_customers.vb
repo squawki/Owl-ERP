@@ -10,7 +10,7 @@ Public Class frm_customers
         LoadCustomers()
     End Sub
 
-    Private Sub LoadCustomers()
+    Public Sub LoadCustomers()
 
 
         ' Set up the SQL query
@@ -19,7 +19,8 @@ Public Class frm_customers
 
 
         ' Create a list to store names retrieved from the database
-
+        customer_results.Clear()
+        dgv_customers.DataSource = Nothing
         Using conn As New SQLiteConnection(globalvariables.connectionString)
             conn.Open()
 
@@ -65,6 +66,11 @@ Public Class frm_customers
         Else
 
         End If
+    End Sub
+
+    Private Sub btn_newcustomer_Click(sender As Object, e As EventArgs) Handles btn_newcustomer.Click
+        frm_addCustomer.Show()
+        LoadCustomers()
     End Sub
 End Class
 Public Class customer_result

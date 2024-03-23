@@ -47,6 +47,7 @@ Public Class frm_addCustomer
         End Using
 
         If rowsaffected > 0 Then
+
             Me.Close()
         Else
             MsgBox("Error Writing Data - Try Again")

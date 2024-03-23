@@ -135,4 +135,31 @@
         PrefillNewRow()
 
     End Sub
+
+    Private Sub lblSelectCustomer_DoubleClick(sender As Object, e As EventArgs) Handles lblSelectCustomer.DoubleClick
+        Dim selected_id As Integer
+        Dim selected_name As String
+        Dim selected_company As String
+
+        Dim frm_selCustomer As New frm_selectCustomer
+        frm_selCustomer.ShowDialog()
+
+        Try
+
+            If frm_selCustomer.selectedcus.ID > 0 Then
+
+
+                selected_id = frm_selCustomer.selectedcus.ID
+                selected_name = frm_selCustomer.selectedcus.Name
+                selected_company = frm_selCustomer.selectedcus.Company
+                customerid = selected_id
+                lblSelectCustomer.Text = selected_name & " (" & selected_company & ")"
+            End If
+        Catch ex As NullReferenceException
+
+        Catch ex As Exception
+        End Try
+    End Sub
+
+
 End Class
