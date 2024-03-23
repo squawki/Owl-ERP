@@ -30,6 +30,7 @@ Partial Class form1
         btnNewQuote = New Button()
         cmb_company = New ComboBox()
         btn_Inventory = New Button()
+        btn_calander = New Button()
         SuspendLayout()
         ' 
         ' btn_openInvoices
@@ -104,11 +105,21 @@ Partial Class form1
         btn_Inventory.Text = "Inventory"
         btn_Inventory.UseVisualStyleBackColor = True
         ' 
+        ' btn_calander
+        ' 
+        btn_calander.Location = New Point(334, 324)
+        btn_calander.Name = "btn_calander"
+        btn_calander.Size = New Size(243, 41)
+        btn_calander.TabIndex = 8
+        btn_calander.Text = "Calander"
+        btn_calander.UseVisualStyleBackColor = True
+        ' 
         ' form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1904, 1041)
+        Controls.Add(btn_calander)
         Controls.Add(btn_Inventory)
         Controls.Add(cmb_company)
         Controls.Add(btnNewQuote)
@@ -130,5 +141,6 @@ Partial Class form1
     Friend WithEvents btnNewQuote As Button
     Friend WithEvents cmb_company As ComboBox
     Friend WithEvents btn_Inventory As Button
+    Friend WithEvents btn_calander As Button
 
 End Class

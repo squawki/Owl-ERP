@@ -108,4 +108,8 @@ Public Class form1
 
         frm_inventory.Show()
     End Sub
+
+    Private Sub btn_calander_Click(sender As Object, e As EventArgs) Handles btn_calander.Click
+        frm_calandervb.Show()
+    End Sub
 End Class
