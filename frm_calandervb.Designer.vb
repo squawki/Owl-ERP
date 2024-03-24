@@ -49,9 +49,17 @@ Partial Class frm_calandervb
         ' 
         ' dgv_cal
         ' 
+        dgv_cal.AllowUserToAddRows = False
+        dgv_cal.AllowUserToDeleteRows = False
+        dgv_cal.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+        dgv_cal.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
         dgv_cal.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgv_cal.Location = New Point(72, 75)
+        dgv_cal.MultiSelect = False
         dgv_cal.Name = "dgv_cal"
+        dgv_cal.ReadOnly = True
+        dgv_cal.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgv_cal.ShowEditingIcon = False
         dgv_cal.Size = New Size(643, 411)
         dgv_cal.TabIndex = 2
         ' 
@@ -66,7 +74,7 @@ Partial Class frm_calandervb
         ' 
         ' btnForwardDay
         ' 
-        btnForwardDay.Location = New Point(310, 33)
+        btnForwardDay.Location = New Point(248, 33)
         btnForwardDay.Name = "btnForwardDay"
         btnForwardDay.Size = New Size(50, 36)
         btnForwardDay.TabIndex = 4
@@ -77,7 +85,7 @@ Partial Class frm_calandervb
         ' 
         lblSelectedDay.AutoSize = True
         lblSelectedDay.Font = New Font("Segoe UI", 14F)
-        lblSelectedDay.Location = New Point(128, 19)
+        lblSelectedDay.Location = New Point(133, 19)
         lblSelectedDay.Name = "lblSelectedDay"
         lblSelectedDay.Size = New Size(89, 25)
         lblSelectedDay.TabIndex = 5
@@ -87,7 +95,7 @@ Partial Class frm_calandervb
         ' 
         lblSelectedDate.AutoSize = True
         lblSelectedDate.Font = New Font("Segoe UI", 14F)
-        lblSelectedDate.Location = New Point(143, 44)
+        lblSelectedDate.Location = New Point(134, 44)
         lblSelectedDate.Name = "lblSelectedDate"
         lblSelectedDate.Size = New Size(80, 25)
         lblSelectedDate.TabIndex = 6
@@ -106,7 +114,7 @@ Partial Class frm_calandervb
         Controls.Add(MonthCalendar1)
         Controls.Add(btn_newEntry)
         Name = "frm_calandervb"
-        Text = "frm_calandervb"
+        Text = "Calander"
         CType(dgv_cal, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
