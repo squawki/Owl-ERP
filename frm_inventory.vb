@@ -65,7 +65,7 @@ Public Class frm_inventory
 
     End Sub
 
-    Private Sub dgv_inventory_CellMouseDoubleClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgv_inventory.CellMouseDoubleClick
+    Private Sub dgv_inventory_DoubleClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgv_inventory.DoubleClick
         If dgv_inventory.SelectedRows.Count > 0 Then
             ' Get the value of the cell in the first column of the selected row
             Dim itemid As String = dgv_inventory.SelectedRows(0).Cells(0).Value?.ToString()

@@ -42,6 +42,7 @@ Partial Class frm_createinvoice
         ' 
         ' dgv_invoice
         ' 
+        dgv_invoice.AllowUserToAddRows = False
         dgv_invoice.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgv_invoice.Columns.AddRange(New DataGridViewColumn() {line_code, line_description, item_qty, item_taxrate, item_unitcost, line_amount})
         dgv_invoice.Location = New Point(94, 100)
