@@ -88,6 +88,7 @@ Public Class frm_inventoryItem
             End Using
             If rowsaffected > 0 Then
                 frm_inventory.LoadInventory()
+                MsgBox(rowsaffected)
                 Me.Close()
             Else
                 MsgBox("Error Writing Data - Try Again")
@@ -96,9 +97,10 @@ Public Class frm_inventoryItem
 
         End If
 
+
         'If Numeric ItemID, based on incrementing primarykey which gets passed
         If IsNumeric(inventoryitem_code) Then
-            If inventoryitem_code > 0 Then
+            If inventoryitem_code > 0 Then 'Item then knows its in edit mode otherwise it would be "N"
 
                 Dim query As String = "update inventory set company=@company, inventorycode=@inventorycode, description=@description, taxrate = @taxrate, price_extax = @price_extax, qty_available = @qty_available where id = @id;"
 
@@ -129,10 +131,10 @@ Public Class frm_inventoryItem
                 Else
                     MsgBox("Error Writing Data - Try Again")
                 End If
-
-
-
             End If
+
+
+
         End If
 
 

@@ -16,6 +16,8 @@ Public Class frm_inventory
 
 
         ' Create a list to store names retrieved from the database
+        dgv_inventory.DataSource = Nothing
+
         inventory_results.Clear()
 
         Using conn As New SQLiteConnection(globalvariables.connectionString)

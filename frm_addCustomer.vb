@@ -20,7 +20,6 @@ Public Class frm_addCustomer
         Dim rowsaffected As Integer
         Using conn As New SQLiteConnection(globalvariables.connectionString)
             conn.Open()
-
             Using cmd As New SQLiteCommand(query, conn)
                 ' Add parameters
                 cmd.Parameters.AddWithValue("@companyID", cmb_company.SelectedValue)
